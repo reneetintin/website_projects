@@ -25,7 +25,7 @@
 		    		<td><img src={{player.photo_link}} class="img-rounded" ></td>
 		    		<td>{{player.acc_score}}</td>
 		    		<td>
-						<form action="" method="post" enctype="multipart/form-data" class="form-group">
+						<form action="new_score" method="post" class="form-group">
 							{% csrf_token %}
 							<input type="hidden" name="player_id" value={{player.id}}>
 							<input type="range" name="new_score" min="-10" max="10">

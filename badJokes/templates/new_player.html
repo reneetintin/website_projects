@@ -1,0 +1,23 @@
+{% load static %}
+
+<html>
+<head>
+        <link rel="stylesheet" type="text/css" href="{% static 'bootstrap.css' %}">
+</head>
+<body>
+	<dir class='container'>
+		<form action="new_player" method="post" class="form-group">
+			{% csrf_token %}
+			<label for="personName">Input Player Name:</label>
+			<input type="text" name="person" id="personName">
+			<label for="photoLink">Input a photo URL:</label>
+			<input type="text" name="photo_link" id="photoLink">
+			<input type="submit">
+		</form>
+		<p>
+			<a href="/badJokes/" class="button">Back to Game</a>
+		</p>
+	</dir>
+</body>
+
+</html>
